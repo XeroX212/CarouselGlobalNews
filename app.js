@@ -3,7 +3,7 @@ var path = require('path')
 
 
 const app = express()
-// const port = 8080
+const port = 8080
 
 // Templating Engine
 app.set('views', path.join(__dirname, '/src/views'))
@@ -21,6 +21,6 @@ const carouselRouter = require('./src/routes/carousel')
 app.use('/', carouselRouter)
 
 // Listen on port 8080
-// app.listen(port, () => console.log(`Listening on port ${port}`))
+app.listen(port, () => console.log(`Listening on port ${port}`))
 
 module.exports = app
